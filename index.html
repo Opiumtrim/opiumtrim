@@ -1208,6 +1208,21 @@ header {
     }
 }
 
+.marquee {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee img {
+  flex-shrink: 0;
+  animation: marqueeScroll 12s linear infinite;
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
 
     </style>
     <!-- HEADER / NAVIGATION -->
@@ -1216,10 +1231,10 @@ header {
     <div id="pre-launch" class="section">
         <div class="pre-launch-container">
             <div class="logo-container">
-                <div class="brand-logo">
-                    <image src="images/prelaunch logo.jpg" alt="opiumtrim logo"></image>
-                    
-                </div>
+             <div class="brand-logo marquee">
+    <img src="images/prelaunch logo.jpg" alt="opiumtrim logo">
+    <img src="images/prelaunch logo.jpg" alt="opiumtrim logo">
+</div>
             </div>
             <p class="launch-message">Launching soon. Be the first to know.</p>
             <form id="waitlist-form" class="waitlist-form">
